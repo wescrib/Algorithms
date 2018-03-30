@@ -1,4 +1,4 @@
-var arr = [1,1,1,1,1,1,1,1,1,1,2,3];
+var arr = [];
 
 var sum = 0;
 
@@ -7,10 +7,9 @@ for(var i=0,j=0; i<arr.length; i++){
         sum += arr[i];
         j++;
     }
-    if(j==10){
+    if(i%10==0 && i!=0){
         j=0;
-        arr[i+1]=sum;
-        i++
+        arr.splice(i,0,sum);
         sum = 0;
     }
 }
